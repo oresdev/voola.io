@@ -13,13 +13,16 @@
 
       <p v-html="t('description')" />
 
-      <button v-html="t('button')" />
+      <button v-text="show ? t('button[1]') : t('button[0]')" v-on:click="show = true" />
     </div>
   </section>
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import { useI18n } from 'vue-i18n' //Import and use
+
+const show = ref(false)
 
 const { t } = useI18n({
   // Pass in the messages object with the text to be scheduled. "zh-CN" - Chinese, "en-US" - English, the key s of the two objects must be identical.
@@ -27,12 +30,12 @@ const { t } = useI18n({
     'zh-CN': {
       title: '钱包应用',
       description: '使用 VOOLA 在您的 Android 和 Apple 设备上安全地存储加密货币让您确信您的数字资产是安全的',
-      button: '下载应用程序',
+      button: ['下载应用程序', '即将推出'],
     },
     'en-US': {
       title: 'Wallet <b>App</b>',
       description: 'Securely store cryptocurrencies on your Android and Apple devices with VOOLA Gives you confidence that your digital assets are safe.',
-      button: 'Download App',
+      button: ['Download App', 'Coming soon..'],
     },
   },
 })

@@ -14,7 +14,7 @@
       <ul>
         <li>
           <i class="icon-download"></i>
-          <a href="#" v-html="t('description[0]')" />
+          <a href="#" v-text="show ? t('description[3]') : t('description[0]')" v-on:click.prevent="show = true" />
         </li>
 
         <li>
@@ -32,18 +32,21 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import { useI18n } from 'vue-i18n' //Import and use
+
+const show = ref(false)
 
 const { t } = useI18n({
   // Pass in the messages object with the text to be scheduled. "zh-CN" - Chinese, "en-US" - English, the key s of the two objects must be identical.
   messages: {
     'zh-CN': {
       title: '从哪里开始？只需简单的步骤!',
-      description: ['下载钱包', '创建自己的钱包', '获取加密货币'],
+      description: ['下载钱包', '创建自己的钱包', '获取加密货币', '即将推出'],
     },
     'en-US': {
       title: 'Where to begin? With <b>simple steps!</b>',
-      description: ['Download a wallet', 'Create your own wallet', 'Receive'],
+      description: ['Download a wallet', 'Create your own wallet', 'Receive', 'Coming soon..'],
     },
   },
 })
