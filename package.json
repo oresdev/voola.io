@@ -1,0 +1,20 @@
+{
+  "name": "voola.io",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "sass": "^1.48.0",
+    "vue": "^3.2.25",
+    "vue-i18n": "^9.2.0-beta.35"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "unplugin-vue-components": "^0.17.13",
+    "vite": "^2.9.9"
+  }
+}
