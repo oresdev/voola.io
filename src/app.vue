@@ -25,6 +25,8 @@
     <crypto-voucher />
 
     <ar-marketplace />
+
+    <social />
   </main>
 
   <footer>
