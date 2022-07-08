@@ -1,7 +1,7 @@
 <template>
   <section>
     <nav>
-      <router-link to="/aml" v-text="`U4U AML`" />
+      <router-link to="/aml" v-text="`VOOLA AML`" />
       <router-link to="/privacy-policy" v-text="`Privacy Policy`" />
       <router-link to="/cookies-policy" v-text="`Cookies Policy`" />
       <router-link to="/terms-and-conditions" v-text="`Terms and Conditions`" />
