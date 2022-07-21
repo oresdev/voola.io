@@ -1,5 +1,5 @@
 <template>
-  <section class="grid" id="download">
+  <section class="grid">
     <div class="grid__item">
       <picture>
         <source media="(max-width: 799px)" srcset="../assets/images/[Mockup]-iPhone-24.png" />
@@ -11,7 +11,7 @@
     <div class="grid__item">
       <h2 v-html="t('title')" />
 
-      <p v-html="t('description')" />
+      <p id="download" v-html="t('description')" />
 
       <a class="button" href="//vip.voola.vip/update/voola-90.apk" download v-text="t('button[0]')" />
 
