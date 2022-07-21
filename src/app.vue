@@ -21,6 +21,15 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'social';
+  src: url('@/assets/fonts/icons/social.eot?7hg3dd');
+  src: url('@/assets/fonts/icons/social.eot?7hg3dd#iefix') format('embedded-opentype'), url('@/assets/fonts/icons/social.woff?7hg3dd') format('woff'),
+    url('@/assets/fonts/icons/social.ttf?7hg3dd') format('truetype'), url('@/assets/fonts/icons/social.svg?7hg3dd#social') format('svg');
+
+  font-display: swap;
+}
+
 i {
   color: var(--scheme-v3);
 
@@ -30,6 +39,31 @@ i {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &.social {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font: 300 40px / 1 'social' !important;
+  }
+}
+
+.icon-apple:before {
+  content: '\a904';
+}
+.icon-googleplay:before {
+  content: '\a905';
+  font-size: 32px;
+}
+.icon-instagram:before {
+  content: '\a900';
+}
+.icon-reddit:before {
+  content: '\a903';
+}
+.icon-telegram:before {
+  content: '\a901';
+}
+.icon-twitter:before {
+  content: '\a902';
 }
 
 .icon-bag:before {
@@ -280,12 +314,15 @@ button {
 }
 
 // set default button properties
-button {
+button,
+.button {
   background-color: var(--scheme-v3);
   border-radius: 16px;
   color: var(--scheme-v2);
 
   cursor: pointer;
+
+  display: inline-block;
 
   font-size: var(--scheme-s);
   margin: 4rem 0 0;

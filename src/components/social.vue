@@ -4,19 +4,13 @@
 
     <p v-html="t('description')" />
 
-    <figure>
-      <a :href="t('link')" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-          <path fill="var(--scheme-v3)" d="M24 4a20 20 0 1 0 0 40 20 20 0 1 0 0-40z" />
-          <path
-            fill="var(--scheme-v2)"
-            d="m33.95 15-3.746 19.126s-.161.874-1.245.874c-.576 0-.873-.274-.873-.274l-8.114-6.733-3.97-2.001-5.095-1.355S10 24.375 10 23.625c0-.625.933-.923.933-.923l21.316-8.468c-.001-.001.651-.235 1.126-.234.292 0 .625.125.625.5 0 .25-.05.5-.05.5z"
-          />
-          <path fill="#b0bec5" d="m23 30.505-3.426 3.374s-.149.115-.348.12a.494.494 0 0 1-.219-.043l.964-5.965L23 30.505z" />
-          <path fill="#cfd8dc" d="M29.897 18.196a.5.5 0 0 0-.701-.093L16 26s2.106 5.892 2.427 6.912c.322 1.021.58 1.045.58 1.045l.964-5.965 9.832-9.096a.499.499 0 0 0 .094-.7z" />
-        </svg>
-      </a>
-    </figure>
+    <div class="icons">
+      <a href="//twitter.com/vooladmcc" target="_blank"><i class="social icon-twitter"></i></a>
+
+      <a href="//www.instagram.com/vooladmcc" target="_blank"><i class="social icon-instagram"></i></a>
+
+      <a :href="t('link')" target="_blank"><i class="social icon-telegram"></i></a>
+    </div>
   </section>
 </template>
 
@@ -46,44 +40,23 @@ section {
   margin: 8em auto;
   text-align: center;
 
-  figure {
-    height: 100px;
-    margin: 3em auto;
-    width: 100px;
+  .icons {
+    display: flex;
+    justify-content: space-evenly;
 
-    svg {
-      max-width: 80px;
-      animation-duration: 1s;
-      animation-fill-mode: both;
-      animation-timing-function: ease-in-out;
-      animation-iteration-count: infinite;
+    margin: 6em auto;
 
-      &:hover {
-        animation-name: bounce;
+    @media only screen and (max-width: 768px) {
+      justify-content: space-between;
+    }
+
+    a {
+      i {
+        &:hover {
+          color: var(--scheme-v4);
+        }
       }
     }
-  }
-}
-
-@keyframes bounce {
-  0%,
-  100%,
-  20%,
-  50%,
-  80% {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -webkit-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-  60% {
-    -webkit-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    transform: translateY(-15px);
   }
 }
 </style>

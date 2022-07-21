@@ -1,12 +1,8 @@
 <template>
-  <div class="to" @click="toBottom">
+  <div class="to" v-scroll-to="'#terms'">
     <div class="to__bottom"></div>
   </div>
 </template>
-
-<script setup>
-const toBottom = () => window.scrollTo(0, document.body.scrollHeight)
-</script>
 
 <style lang="scss" scoped>
 .to {

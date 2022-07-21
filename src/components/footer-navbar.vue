@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="terms">
     <nav>
       <router-link to="/aml" v-text="`VOOLA AML`" />
       <router-link to="/privacy-policy" v-text="`Privacy Policy`" />
