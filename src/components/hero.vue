@@ -14,7 +14,7 @@
 
       <p v-html="t('description')" />
 
-      <button v-text="t('button')" v-scroll-to="'#steps'" />
+      <button v-text="t('button')" v-scroll-to="'#download'" />
     </div>
 
     <div class="grid__item">
